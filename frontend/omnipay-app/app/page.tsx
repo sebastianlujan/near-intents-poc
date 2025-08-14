@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { ToggleButtons } from "@/components/toggle-buttons"
 import { PaymentInfo } from "@/components/payment-info"
+import { CTAButton } from "@/components/cta-button"
 import { Footer } from "@/components/footer"
 
 export default function OmnipayLandingPage() {
@@ -18,6 +19,7 @@ export default function OmnipayLandingPage() {
         <div className="flex flex-col justify-center items-center gap-8 w-[800px] h-[662px] flex-none">
           <Hero />
           <ToggleButtons activeTab={activeTab} onTabChange={setActiveTab} />
+          <CTAButton activeTab={activeTab} />
           <PaymentInfo />
         </div>
       </div>
