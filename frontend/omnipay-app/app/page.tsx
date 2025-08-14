@@ -19,8 +19,8 @@ export default function OmnipayLandingPage() {
         <div className="flex flex-col justify-center items-center gap-8 w-[800px] h-[662px] flex-none">
           <Hero />
           <ToggleButtons activeTab={activeTab} onTabChange={setActiveTab} />
-          <CTAButton activeTab={activeTab} />
           <PaymentInfo />
+          <CTAButton activeTab={activeTab} />
         </div>
       </div>
 
