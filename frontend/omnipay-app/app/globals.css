@@ -26,6 +26,16 @@
     --radius: 0.75rem;
   }
 
+  .font-electrolize {
+    font-family: 'Electrolize', monospace;
+  }
+
+  .font-share {
+    font-family: 'Share', sans-serif;
+  }
+
+
+
   /* optional: override for dark mode if you use <html class="dark"> */
   .dark {
     /* usually same values in shadcn, but you can change them */
@@ -33,9 +43,15 @@
 
   * {
     @apply border-border;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
   }
+
   body {
     @apply bg-background text-foreground;
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 

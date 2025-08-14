@@ -1,12 +1,15 @@
-import Image from "next/image";
-import Hero from "@/components/hero";
+"use client"
+import { useState } from "react"
 
-export default function Home() {
+export default function OmnipayLandingPage() {
+  const [activeTab, setActiveTab] = useState<"buyer" | "seller">("seller")
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Hero />
-      </main>
+    <div className="min-h-screen text-white flex flex-col bg-gradient-radial from-[#23203E] via-[#23203E] to-[#0C0C17]">
+      <div className="flex-1 flex items-center justify-center px-8">
+        <div className="flex flex-col justify-center items-center gap-8 w-[800px] h-[662px] flex-none">
+        </div>
+      </div>
     </div>
-  );
+  )
 }

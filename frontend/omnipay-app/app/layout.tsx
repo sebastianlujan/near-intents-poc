@@ -3,18 +3,22 @@ import { Inter } from 'next/font/google'
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
-/*
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-*/
+const electrolize = Inter({
+  weight: "400",
+  subsets: ['latin'],
+  variable: '--font-electrolize'
+})
+
+const share = Inter({
+  weight: "400",
+  subsets: ['latin'],
+  variable: '--font-share'
+})
 
 export const metadata: Metadata = {
   title: "OmniPay, Pay With Anything, Receive What You Want",
@@ -27,10 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} min-h-screen bg-gradient-to-b from-[#23203E] to-[#0C0C17]`}>
-        {children}
-      </body>
+    <html lang="en" className={`${inter.variable} ${share.variable} ${electrolize.variable}`}>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
