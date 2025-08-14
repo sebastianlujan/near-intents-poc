@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { ToggleButtons } from "@/components/toggle-buttons"
+import { PaymentInfo } from "@/components/payment-info"
 
 export default function OmnipayLandingPage() {
   const [activeTab, setActiveTab] = useState<"buyer" | "seller">("seller")
@@ -16,6 +17,7 @@ export default function OmnipayLandingPage() {
         <div className="flex flex-col justify-center items-center gap-8 w-[800px] h-[662px] flex-none">
           <Hero />
           <ToggleButtons activeTab={activeTab} onTabChange={setActiveTab} />
+          <PaymentInfo />
         </div>
       </div>
     </div>
