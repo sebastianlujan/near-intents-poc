@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { ToggleButtons } from "@/components/toggle-buttons"
 import { PaymentInfo } from "@/components/payment-info"
+import { Footer } from "@/components/footer"
 
 export default function OmnipayLandingPage() {
   const [activeTab, setActiveTab] = useState<"buyer" | "seller">("seller")
@@ -20,6 +21,8 @@ export default function OmnipayLandingPage() {
           <PaymentInfo />
         </div>
       </div>
+
+      <Footer />
     </div>
   )
 }
